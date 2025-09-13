@@ -125,6 +125,7 @@ To ensure that the runner service starts automatically when the EC2 instance reb
 
 ```bash
 sudo systemctl enable actions.runner.<your-runner-name>.service
+sudo systemctl enable actions.runner.udaygupta8899-Vehicle-Insurance-Domain.self-hosted.service
 ```
 
 ### Additional Notes
