@@ -54,11 +54,11 @@ jobs:
 
       - name: Pull and Run Docker Container
         run: |
-          docker stop determined_kepler || true
-          docker rm determined_kepler || true
+          docker stop determined_tesla || true
+          docker rm determined_tesla || true
           docker pull "${{ steps.login-ecr.outputs.registry }}"/"${{ secrets.ECR_REPO }}":latest
           docker run -d --restart unless-stopped \
-            --name determined_kepler \
+            --name determined_tesla \
             -e AWS_ACCESS_KEY_ID="${{ secrets.AWS_ACCESS_KEY_ID }}" \
             -e AWS_SECRET_ACCESS_KEY="${{ secrets.AWS_SECRET_ACCESS_KEY }}" \
             -e AWS_DEFAULT_REGION="${{ secrets.AWS_DEFAULT_REGION }}" \
